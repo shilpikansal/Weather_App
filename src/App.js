@@ -60,23 +60,35 @@ class App extends React.Component
 				  Error:''}}
 				}
 
-				console.log(weather_data)
+		//		console.log(weather_data)
 			}
 		}
 		render()
 		{
 			return(
-				<div>
-				<Title />
-				<Form getWeather={this.getWeather}/>
-				<Components
-				Description={this.state.weather.Description}
-				Temperature={this.state.weather.Temperature}
-				Wind={this.state.weather.Wind}
-				Humidity={this.state.weather.Humidity}
-				Visibility={this.state.weather.Visibility}
-				Error={this.state.weather.Error}/>
-				</div>
+					<div>
+						<div className="wrapper">
+							<div className="main">
+								<div className="container">
+									<div className="row">
+										<div className="col-xs-5 title-container">
+											<Title />
+										</div>
+										<div className="col-xs-7 form-container">
+											<Form getWeather={this.getWeather}/>
+											<Components
+												Description={this.state.weather.Description}
+												Temperature={this.state.weather.Temperature}
+												Wind={this.state.weather.Wind}
+												Humidity={this.state.weather.Humidity}
+												Visibility={this.state.weather.Visibility}
+												Error={this.state.weather.Error}/>
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 			)
 		}
 	}

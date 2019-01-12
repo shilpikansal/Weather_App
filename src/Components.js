@@ -6,12 +6,17 @@ class Components extends React.Component
   render(){
     return(
       <div>
-      {this.props.Description && <p> Description:{this.props.Description} </p>}
-      {this.props.Temperature && <p> Temperature:{this.props.Temperature}</p>}
-      {this.props.Wind && <p> Wind:{this.props.Wind}</p>}
-      {this.props.Humidity &&<p>Humidity:{this.props.Humidity}</p>}
-      {this.props.Visibility &&<p>Visibility:{this.props.Visibility}</p>}
-      {this.props.Error &&<p>{this.props.Error}</p>}
+      {this.props.Description && <p className="weather__key"> Description:
+      <span className="weather__value"> {this.props.Description} </span> </p>}
+      {this.props.Temperature && <p className="weather__key"> Temperature:
+      <span className="weather__value"> {this.props.Temperature}</span> </p>}
+      {this.props.Wind && <p className="weather__key"> Wind:
+      <span className="weather__value"> {this.props.Wind}</span> </p>}
+      {this.props.Humidity &&<p className="weather__key">Humidity:
+      <span className="weather__value"> {this.props.Humidity} </span> </p>}
+      {this.props.Visibility &&<p className="weather__key">Visibility:
+      <span className="weather__value"> {this.props.Visibility} </span></p>}
+      {this.props.Error && <p className="weather__error">{this.props.Error}</p>}
       </div>
     )
   }
